@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Poem Book</title>
+    <style>
+      /* Style the header */
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+  
+      /* Style the main section */
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px auto;
+        width: 80%;
+      }
+  
+      /* Style the book description section */
+      #book-description {
+        margin-bottom: 50px;
+        text-align: center;
+      }
+  
+      /* Style the buy button section */
+      #buy-button {
+        text-align: center;
+      }
+  
+      /* Style the buttons section */
+      #buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+  
+      /* Style the buttons */
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #0070ba;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+        margin: 0 10px;
+      }
+  
+      /* Style the buttons on hover */
+      .button:hover {
+        background-color: #005499;
+      }
+  
+      /* Style the footer */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>The book of Poems</h1>
+    </header>
+    <main>
+      <section id="book-description">
+        <h2>About the Book</h2>
+        <p>Welcome to my book of poems! As a student, I was captivated by the various forms of poetry we learned about in school, and that sparked a desire in me to create my own. Each poem in this book is a reflection of my personal experiences, thoughts, and emotions, expressed through the art of poetry. 
+        </p>
+        <p>With original pieces in various styles, from the whimsical limerick to the reflective autobiography poem, each one is a unique expression of my creativity and love for the written word. You'll also find examples of my handmade sketches, carefully chosen to complement and enhance the meaning of each poem. 
+        </p>
+        <p>Take a journey with me through the world of acrostic poems, haikus, diamantes, cinquains, and animal alliteration poems, and discover the beauty and power of poetry for yourself.</p>
+        <p>Price: $10</p>
+      </section>
+      <section id="buttons">
+        <a href="#" class="button" id="preview-button">Preview</a>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="your_paypal_button_id">
+          <button type="submit" class="button" id="buy-button">Buy Now</button>
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright 2023 My Poem Book</p>
+    </footer>
+    <script>
+      // Add an event listener to the preview button
+// Add an event listener to the preview button
+var previewButton = document.getElementById('preview-button');
+previewButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  // Use relative path to the image file
+  var previewUrl = 'Preview.png';
+  var width = Math.round(window.innerWidth * 0.6);
+  var height = Math.round(window.innerHeight * 0.6);
+  var previewWindow = window.open('', 'previewWindow', 'width=' + width + ',height=' + height);
+  var image = new Image();
+  image.src = previewUrl;
+  image.onload = function() {
+    var scale = Math.min(width / image.width, height / image.height);
+    var newWidth = Math.round(scale * image.width);
+    var newHeight = Math.round(scale * image.height);
+    image.width = newWidth;
+    image.height = newHeight;
+    previewWindow.document.body.appendChild(image);
+  };
+});
+
+</script>
+  </body>
+</html>
