@@ -37,6 +37,21 @@
         justify-content: center;
         margin-bottom: 50px;
       }
+
+      #preview-button {
+  background-color: #FFCC33; /* set the button background color to yellow */
+  color: #333; /* set the text color to dark gray */
+  border: none; /* remove the button border */
+  border-radius: 20px; /* set the border radius to create an oval shape */
+  padding: 10px 20px; /* add some padding to make the button easier to click */
+  text-decoration: none; /* remove the underline from the button text */
+  display: inline-block; /* set the button display to inline-block */
+}
+
+#preview-button:hover {
+  background-color: #FDB813; /* change the background color on hover */
+  color: #fff; /* change the text color on hover */
+}
   
       /* Style the buttons */
       .button {
@@ -80,16 +95,16 @@
         <p>With original pieces in various styles, from the whimsical limerick to the reflective autobiography poem, each one is a unique expression of my creativity and love for the written word. You'll also find examples of my handmade sketches, carefully chosen to complement and enhance the meaning of each poem. 
         </p>
         <p>Take a journey with me through the world of acrostic poems, haikus, diamantes, cinquains, and animal alliteration poems, and discover the beauty and power of poetry for yourself.</p>
-        <p>Price: $10</p>
+        <p>Price: $5</p>
       </section>
       <section id="buttons">
         <a href="#" class="button" id="preview-button">Preview</a>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
           <input type="hidden" name="cmd" value="_s-xclick">
-          <input type="hidden" name="hosted_button_id" value="your_paypal_button_id">
-          <button type="submit" class="button" id="buy-button">Buy Now</button>
+          <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
           <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </form>
+          </form>          
       </section>
     </main>
     <footer>
